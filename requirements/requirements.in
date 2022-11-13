@@ -1,0 +1,4 @@
+pydantic>=1.10 # for parse_env_var method usage: https://pydantic-docs.helpmanual.io/changelog/#v1100-2022-08-30
+fastapi
+uvicorn[standard]
+-e file:.
