@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     db_name: str = "postgres"
     db_schema_name: str = "public"
     db_user: str = "postgres"
-    db_pass: SecretStr = ""
+    db_pass: SecretStr
 
     # CORS
     cors_origins: list[str] = ["*"]
