@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from pizza_place_insights.database.connection import get_db_sess
 from pizza_place_insights.services.uploads import common
 
-from . import controller  # , exceptions, schemas
+from . import controller
 
 log = logging.getLogger(__name__)
 
