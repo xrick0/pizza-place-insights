@@ -19,13 +19,11 @@ db_uri = (
     + f"@{get_settings().db_host}:{get_settings().db_port}/{get_settings().db_name}"
 )
 
-engine = (
-    create_async_engine(
-        db_uri,
-        pool_pre_ping=True,
-        echo=get_settings().dev_sqlalchemy_echo,
-    ).execution_options(schema_translate_map=schema_translate_map),
-)
+engine = create_async_engine(
+    db_uri,
+    pool_pre_ping=True,
+    echo=get_settings().dev_sqlalchemy_echo,
+).execution_options(schema_translate_map=schema_translate_map)
 
 
 log.debug("Definindo sessionmakers")
