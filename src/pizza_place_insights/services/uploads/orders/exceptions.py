@@ -1,0 +1,6 @@
+class InvalidFileCombinationError(Exception):
+    ...
+
+
+class AlreadyExistsError(Exception):
+    ...
