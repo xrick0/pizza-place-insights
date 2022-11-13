@@ -1,13 +1,21 @@
 from functools import lru_cache
 from typing import Any, Optional
 
-from pydantic import BaseSettings
+from pydantic import BaseSettings, SecretStr
 
 
 class Settings(BaseSettings):
     # APP
-    app_host: str = "0.0.0.0"
+    app_host: str = "localhost"
     app_port: int = 8000
+
+    # DATABASE
+    db_host: str = "localhost"
+    db_port: int = 5432
+    db_name: str = "postgres"
+    db_schema_name: str = "public"
+    db_user: str = "postgres"
+    db_pass: SecretStr = ""
 
     # CORS
     cors_origins: list[str] = ["*"]
@@ -18,6 +26,7 @@ class Settings(BaseSettings):
 
     # Development
     dev_uvicorn_reload: bool = False
+    dev_sqlalchemy_echo: bool = False
 
     class Config:
         env_file = ".env"

@@ -66,6 +66,8 @@ pytest-cov==4.0.0
     # via -r requirements/requirements-dev.in
 six==1.16.0
     # via tox
+sqlalchemy2-stubs==0.0.2a29
+    # via -r requirements/requirements-dev.in
 tomli==2.0.1
     # via
     #   black
@@ -79,5 +81,6 @@ typing-extensions==4.4.0
     # via
     #   -c requirements/requirements.txt
     #   mypy
+    #   sqlalchemy2-stubs
 virtualenv==20.16.7
     # via tox
