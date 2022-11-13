@@ -65,7 +65,9 @@ pytest==7.2.0
 pytest-cov==4.0.0
     # via -r requirements/requirements-dev.in
 six==1.16.0
-    # via tox
+    # via
+    #   -c requirements/requirements.txt
+    #   tox
 sqlalchemy2-stubs==0.0.2a29
     # via -r requirements/requirements-dev.in
 tomli==2.0.1
