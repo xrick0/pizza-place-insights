@@ -6,3 +6,4 @@ mypy>=0.94 # for python 3.10 match statements support: https://mypy-lang.blogspo
 tox
 pytest
 pytest-cov
+sqlalchemy2-stubs
