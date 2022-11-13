@@ -11,13 +11,13 @@ from . import controller
 
 log = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/pizza_types")
+router = APIRouter(prefix="/pizzas")
 
 
 @router.put(
     "/",
-    summary="Upload pizza types csv",
-    description="Upload CSV containing pizza types",
+    summary="Upload pizzas csv",
+    description="Upload CSV containing pizzas",
     response_model=common.schemas.DefaultResponse,
 )
 async def update(
