@@ -1,4 +1,5 @@
 import uvicorn
+
 from pizza_place_insights.config import get_settings
 
 if __name__ == "__main__":

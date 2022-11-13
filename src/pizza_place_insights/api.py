@@ -4,6 +4,8 @@ from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
+from pizza_place_insights.services.uploads.router import router as uploads_router
+
 
 class ErrorMessage(BaseModel):
     msg: str
@@ -27,3 +29,4 @@ router = APIRouter(
 
 
 # Add routers to the api router
+router.include_router(uploads_router)

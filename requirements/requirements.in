@@ -3,4 +3,5 @@ fastapi
 uvicorn[standard]
 sqlalchemy[postgresql_asyncpg]<2
 alembic
+python-multipart
 -e file:.
